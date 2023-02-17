@@ -10,7 +10,7 @@ on:
 jobs:
   release:
     name: Release
-    if: github.repository == 'kubernetes-sigs/metrics-server'
+    if: github.repository == 'platform9/metrics-server'
     runs-on: ubuntu-latest
     defaults:
       run:

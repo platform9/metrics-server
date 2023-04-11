@@ -17,7 +17,7 @@ jobs:
         shell: bash
     steps:
       - name: Checkout
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c #v3.3.0
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 #v3.5.0
         with:
           fetch-depth: 0
 
@@ -28,13 +28,13 @@ jobs:
 
       - name: Get chart version
         id: chart_version
-        uses: mikefarah/yq@87cba2ecbeaecf860efcceb66deab46ae030ce1e # v4.30.6
+        uses: mikefarah/yq@ebd1548e96c7726236c4e05082a03619c3548d50 # v4.33.1
         with:
           cmd: yq eval '.version' './charts/metrics-server/Chart.yaml'
 
       - name: Get chart app version
         id: chart_app_version
-        uses: mikefarah/yq@87cba2ecbeaecf860efcceb66deab46ae030ce1e # v4.30.6
+        uses: mikefarah/yq@ebd1548e96c7726236c4e05082a03619c3548d50 # v4.33.1
         with:
           cmd: yq eval '.appVersion' './charts/metrics-server/Chart.yaml'
 
